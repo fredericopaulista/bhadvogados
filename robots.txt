@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /assets/
+Disallow: /scripts/
+Allow: /
+
+Sitemap: https://bh.advogados.emp.br/sitemap.xml

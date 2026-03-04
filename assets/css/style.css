@@ -1,0 +1,166 @@
+/* Premium Elite Criminal Law UI/UX */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    /* Premium dark foundation */
+    background-color: #020617;
+    /* Tailwind slate-950 */
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #020617;
+    /* Deepest blue/black */
+    color: #cbd5e1;
+    /* slate-300 for readable dense text */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.03em;
+    color: #f8fafc;
+    /* crisp white for headers */
+}
+
+/* Glassmorphism - Premium Deep Context */
+.glass {
+    background: rgba(15, 23, 42, 0.65);
+    /* slate-900 but transparent */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-dark {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    /* gold subtle border */
+}
+
+/* Accordion Transitions - Dark Mode Adjusted */
+.accordion-content {
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.4s ease-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.accordion-trigger.active+.accordion-content {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.accordion-trigger .chevron {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-trigger.active .chevron {
+    transform: rotate(180deg);
+}
+
+/* Hover Interlinks - Premium Elite Depth */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Glowing Gold Button Logic */
+.btn-gold-glow {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-gold-glow:hover {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    transform: scale(1.02);
+}
+
+/* Floating WhatsApp Animation */
+@keyframes pulse-whatsapp-dark {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.btn-whatsapp-float {
+    animation: pulse-whatsapp-dark 2.5s infinite;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-whatsapp-float:hover {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* Primary Brand Semantic Overrides */
+.bg-brand-dark {
+    background-color: #0f172a;
+}
+
+.text-brand-dark {
+    color: #020617;
+}
+
+/* Usually used for text ON gold */
+.text-brand-light {
+    color: #f8fafc;
+}
+
+.bg-brand-darker {
+    background-color: #020617;
+}
+
+.text-brand-gold {
+    color: #d4af37;
+}
+
+.bg-brand-gold {
+    background-color: #d4af37;
+}
+
+.border-brand-gold {
+    border-color: #d4af37;
+}
+
+/* Ambient Background Glows */
+.ambient-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Focus */
+*:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 4px;
+}
