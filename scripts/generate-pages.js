@@ -412,6 +412,7 @@ function getTemplate(title, type, description, breadcrumbs, customContent = null
                     <a href="/contato/" class="hover:text-brand-gold transition-colors">Contato</a>
                     <a href="/privacidade/" class="hover:text-brand-gold transition-colors">Privacidade</a>
                     <a href="/termos/" class="hover:text-brand-gold transition-colors">Termos</a>
+                    <a href="/sitemap.xml" class="hover:text-brand-gold transition-colors">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -718,6 +719,7 @@ function getBairroTemplate(bairro) {
                 <a href="/contato" class="hover:text-brand-gold">Contato</a>
                 <a href="/privacidade" class="hover:text-brand-gold">Privacidade</a>
                 <a href="/termos" class="hover:text-brand-gold">Termos</a>
+                <a href="/sitemap.xml" class="hover:text-brand-gold">Sitemap</a>
             </div>
             <p class="text-[10px]">&copy; 2026 Advocacia Criminal BH. Todos os direitos reservados. OAB/MG.</p>
         </div>

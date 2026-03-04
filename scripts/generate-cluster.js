@@ -325,6 +325,7 @@ function getClusterTemplate(opts) {
                     <a href="/contato" class="hover:text-brand-gold transition-colors">Contato</a>
                     <a href="/privacidade" class="hover:text-brand-gold transition-colors">Privacidade</a>
                     <a href="/termos" class="hover:text-brand-gold transition-colors">Termos</a>
+                    <a href="/sitemap.xml" class="hover:text-brand-gold transition-colors">Sitemap</a>
                 </div>
             </div>
         </div>

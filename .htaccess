@@ -1,0 +1,94 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Previnir conflitos com extensões automáticas
+    Options -MultiViews
+
+    # 1. Forçar HTTPS (Redirecionamento Seguro)
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. Forçar Non-WWW para o subdomínio (SEO Canônico)
+    RewriteCond %{HTTP_HOST} ^www\.bh\.advogados\.emp.br [NC]
+    RewriteRule ^(.*)$ https://bh.advogados.emp.br/$1 [L,R=301]
+
+    # 3. Ocultar extensão .html das URLs no frontend e forçar Redirect 301
+    
+    # Redireciona /página.html para /página (apenas se não for um diretório real)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+    RewriteRule ^([^.]+)\.html$ https://bh.advogados.emp.br/$1 [R=301,L]
+
+    # Se pedir /página e existir página.html, serve o arquivo
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^([^/]+)$ /$1.html [L]
+
+    # Tratamento especial de diretórios (adiciona trailing slash se faltar)
+    # Isso evita 404s em pastas se o usuário digitar sem a barra final
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^(.*?[^/])$ %{REQUEST_URI}/ [L,R=301]
+
+    # Servir index.html automaticamente em diretórios
+    DirectoryIndex index.html
+</IfModule>
+
+# 4. Habilitar Compressão GZIP / Módulo Deflate (Velocidade e SEO Core Web Vitals)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 5. Configuração de Cache no Navegador / Expires (Velocidade)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imagens e Favicons
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS, JavaScript e JSON
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/json "access plus 1 month"
+
+    # Arquivos HTML (1 dia de cache para evitar prender atualizações bruscas)
+    ExpiresByType text/html "access plus 1 day"
+    
+    # Sitemap e Robots
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+</IfModule>
+
+# 6. Segurança Básica
+
+# Previnir listagem do conteúdo de diretórios sem index.html
+Options -Indexes
+
+# Proteger dados do próprio Apache/Git
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^\.git">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^generate-pages\.js|.gitignore|README.md">
+    Require all denied
+</FilesMatch>
