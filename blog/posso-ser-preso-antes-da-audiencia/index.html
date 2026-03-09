@@ -125,7 +125,7 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button outline-none" id="mobile-menu-btn">
+                    <button class="mobile-menu-button outline-none" id="mobile-menu-btn" aria-label="Abrir menu mobile">
                         <svg class="w-10 h-10 text-brand-gold" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -140,7 +140,7 @@
                 <li><a href="/#urgencia" class="block text-lg px-6 py-4 text-white font-bold border-b border-white/5">🚨 Urgências 24h</a></li>
                 <li><a href="/sobre" class="block text-lg px-6 py-4 text-white font-bold border-b border-white/5">⚖️ Sobre a Advogada</a></li>
                 <li class="border-b border-white/5">
-                    <button id="mobile-services-btn" class="w-full flex justify-between items-center text-lg px-6 py-4 text-white font-bold">
+                    <button id="mobile-services-btn" class="w-full flex justify-between items-center text-lg px-6 py-4 text-white font-bold" aria-label="Alternar áreas de atuação">
                         Áreas de Atuação
                         <svg class="w-5 h-5 toggle-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -209,13 +209,13 @@
                 
                 <div class="bg-white/5 p-6 rounded-3xl border border-white/5 shadow-inner">
                     <h3 class="font-black text-white mb-4 flex items-center uppercase tracking-widest text-xs"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Defesa Estratégica</h3>
-                    <ul class="space-y-3 text-sm"><li><a href="/execucao-penal-bh/" class="text-white hover:text-brand-gold hover-lift block p-4 bg-white/5 border border-white/5 rounded-xl shadow-lg font-bold">Execução Penal</a></li><li><a href="/prisao-bh/" class="text-white hover:text-brand-gold hover-lift block p-4 bg-white/5 border border-white/5 rounded-xl shadow-lg font-bold">Prisão e Urgência</a></li></ul>
+                    <ul class="space-y-3 text-sm"><li><a href="/prisao-bh/" class="text-white hover:text-brand-gold hover-lift block p-4 bg-white/5 border border-white/5 rounded-xl shadow-lg font-bold">Prisão e Urgência</a></li><li><a href="/drogas-bh/" class="text-white hover:text-brand-gold hover-lift block p-4 bg-white/5 border border-white/5 rounded-xl shadow-lg font-bold">Crimes de Drogas</a></li></ul>
                 </div>
                 
 
                 <div class="bg-white/5 p-6 rounded-3xl border border-white/5 shadow-inner">
                     <h3 class="font-black text-white mb-4 flex items-center uppercase tracking-widest text-xs"><svg class="w-4 h-4 mr-2 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Plantão por Região</h3>
-                    <ul class="space-y-3 text-sm"><li><a href="/bairros/advogado-criminalista-santa-sofia-bh" class="text-brand-gold hover:underline">Advogado Criminal no Santa Sofia</a></li><li><a href="/bairros/advogado-criminalista-cenaculo-bh" class="text-brand-gold hover:underline">Advogado Criminal no Cenáculo</a></li><li><a href="/bairros/advogado-criminalista-novo-das-industrias-bh" class="text-brand-gold hover:underline">Advogado Criminal no Novo das Indústrias</a></li><li><a href="/bairros/advogado-criminalista-parque-sao-pedro-bh" class="text-brand-gold hover:underline">Advogado Criminal no Parque São Pedro</a></li><li><a href="/bairros/advogado-criminalista-vale-do-jatoba-bh" class="text-brand-gold hover:underline">Advogado Criminal no Vale do Jatobá</a></li></ul>
+                    <ul class="space-y-3 text-sm"><li><a href="/bairros/advogado-criminalista-silveira-bh" class="text-brand-gold hover:underline">Advogado Criminal no Silveira</a></li><li><a href="/bairros/advogado-criminalista-lagoinha-bh" class="text-brand-gold hover:underline">Advogado Criminal no Lagoinha</a></li><li><a href="/bairros/advogado-criminalista-sao-joao-batista-bh" class="text-brand-gold hover:underline">Advogado Criminal no São João Batista</a></li><li><a href="/bairros/advogado-criminalista-juliana-bh" class="text-brand-gold hover:underline">Advogado Criminal no Juliana</a></li><li><a href="/bairros/advogado-criminalista-santa-maria-bh" class="text-brand-gold hover:underline">Advogado Criminal no Santa Maria</a></li></ul>
                 </div>
             </div>
 
@@ -303,7 +303,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">
+            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">
                 <p>&copy; 2026 Flávia Cury - Advocacia Criminal. Todos os direitos protegidos.</p>
                 <div class="mt-8 md:mt-0 flex flex-wrap justify-center gap-6">
                     <a href="/sobre/" class="hover:text-brand-gold transition-colors">A Advogada</a>
@@ -317,7 +317,7 @@
     </footer>
     
     <!-- Floating WhatsApp Global -->
-    <a href="https://wa.me/5531998955912?text=Preciso%20falar%20com%20um%20advogado%20criminalista%20agora." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-2xl hover:bg-green-600 transition-colors z-50 flex items-center justify-center">
+    <a href="https://wa.me/5531998955912?text=Preciso%20falar%20com%20um%20advogado%20criminalista%20agora." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-2xl hover:bg-green-600 transition-colors z-50 flex items-center justify-center" aria-label="Contato via WhatsApp">
         <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.738 10.564 10.564 0 5.826-4.74 10.562-10.564 10.562z"/></svg>
     </a>
     <script src="/assets/js/main.js"></script>
