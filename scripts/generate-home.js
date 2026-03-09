@@ -59,11 +59,11 @@ function getHomeContent() {
         <h2 class="text-3xl lg:text-4xl font-black text-brand-gold mb-8 uppercase tracking-widest border-b border-brand-gold/20 pb-4">Estratégia de Defesa e E-E-A-T Criminal</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-slate-300">
             <div class="bg-black/40 p-8 rounded-2xl border border-white/5">
-                <h4 class="text-white font-bold text-xl mb-4 flex items-center"><span class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3 text-brand-gold">🏛️</span> Atuação perante o TJMG</h4>
+                <h3 class="text-white font-bold text-xl mb-4 flex items-center"><span class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3 text-brand-gold">🏛️</span> Atuação perante o TJMG</h3>
                 <p class="leading-relaxed">Nossa expertise abrange a interposição de Habeas Corpus, Recurso em Sentido Estrito (RESE) e Apelações criminais com foco em anular ilegalidades e garantir a aplicação justa da lei pena em Minas Gerais.</p>
             </div>
             <div class="bg-black/40 p-8 rounded-2xl border border-white/5">
-                <h4 class="text-white font-bold text-xl mb-4 flex items-center"><span class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3 text-brand-gold">⚖️</span> Relacionamento Institucional</h4>
+                <h3 class="text-white font-bold text-xl mb-4 flex items-center"><span class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3 text-brand-gold">⚖️</span> Relacionamento Institucional</h3>
                 <p class="leading-relaxed">Mantemos uma postura técnica e respeitosa com as instâncias do MPMG e Judiciário, focando no convencimento jurídico através da prova técnica e argumentação lógica, sem promessas vãs de resultado.</p>
             </div>
         </div>
@@ -91,23 +91,23 @@ function getHomeContent() {
         <h2 class="text-4xl font-black text-white mb-12 text-center tracking-tight">Como Funciona Nossa Defesa Criminal Imediata</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="p-8 border-t-4 border-brand-gold glass-dark shadow-2xl hover-lift rounded-b-2xl">
-                <span class="block text-5xl font-black text-white/10 mb-4">01</span>
-                <h4 class="font-bold text-white text-xl mb-3">Análise Tática</h4>
+                <span class="block text-5xl font-black text-slate-500 mb-4" aria-hidden="true">01</span>
+                <h3 class="font-bold text-white text-xl mb-3">Análise Tática</h3>
                 <p class="text-sm text-slate-400 font-medium">Estudo imediato do auto de prisão ou inquérito para identificar nulidades.</p>
             </div>
             <div class="p-8 border-t-4 border-brand-gold glass-dark shadow-2xl hover-lift rounded-b-2xl">
-                <span class="block text-5xl font-black text-white/10 mb-4">02</span>
-                <h4 class="font-bold text-white text-xl mb-3">Estratégia de Defesa</h4>
+                <span class="block text-5xl font-black text-slate-500 mb-4" aria-hidden="true">02</span>
+                <h3 class="font-bold text-white text-xl mb-3">Estratégia de Defesa</h3>
                 <p class="text-sm text-slate-400 font-medium">Construção da tese defensiva baseada em provas técnicas e jurisprudência.</p>
             </div>
             <div class="p-8 border-t-4 border-brand-gold glass-dark shadow-2xl hover-lift rounded-b-2xl">
-                <span class="block text-5xl font-black text-white/10 mb-4">03</span>
-                <h4 class="font-bold text-white text-xl mb-3">Atuação em Flagrante</h4>
+                <span class="block text-5xl font-black text-slate-500 mb-4" aria-hidden="true">03</span>
+                <h3 class="font-bold text-white text-xl mb-3">Atuação em Flagrante</h3>
                 <p class="text-sm text-slate-400 font-medium">Presença física em audiências de custódia e delegacias para garantir direitos.</p>
             </div>
             <div class="p-8 border-t-4 border-brand-gold glass-dark shadow-2xl hover-lift rounded-b-2xl">
-                <span class="block text-5xl font-black text-white/10 mb-4">04</span>
-                <h4 class="font-bold text-white text-xl mb-3">Gestão Processual</h4>
+                <span class="block text-5xl font-black text-slate-500 mb-4" aria-hidden="true">04</span>
+                <h3 class="font-bold text-white text-xl mb-3">Gestão Processual</h3>
                 <p class="text-sm text-slate-400 font-medium">Monitoramento diário dos processos no TJMG e instâncias superiores.</p>
             </div>
         </div>

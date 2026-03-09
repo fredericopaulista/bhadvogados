@@ -275,7 +275,7 @@ function getTemplate(title, type, description, breadcrumbs, customContent = null
 
     <main class="${type === 'home' ? 'max-w-screen-2xl px-2 sm:px-4' : 'max-w-6xl px-4 sm:px-6 lg:px-8'} mx-auto py-16">
         ${(breadcrumbs && type !== 'home') ? `
-        <div class="text-xs uppercase tracking-widest text-slate-500 mb-10 flex items-center space-x-2">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-10 flex items-center space-x-2">
             <a href="/" class="hover:text-brand-gold transition-colors font-bold">Home</a> 
             <span class="text-slate-700">/</span> 
             <span class="font-bold">${breadcrumbs}</span> 
@@ -372,7 +372,7 @@ function getTemplate(title, type, description, breadcrumbs, customContent = null
                     <p class="text-slate-400 text-lg mb-8 max-w-md leading-relaxed">
                         O Escritório da Dra. Flávia Cury é focado em resoluções rápidas e garantias constitucionais na área metropolitana de Belo Horizonte, Minas Gerais. Despachos emergenciais 24h.
                     </p>
-                    <div class="text-slate-500 text-sm space-y-4 font-bold uppercase tracking-widest">
+                    <div class="text-slate-400 text-sm space-y-4 font-bold uppercase tracking-widest">
                         <p class="flex items-center"><span class="text-brand-gold mr-3">📍</span> Belo Horizonte - MG (Todas as Regionais)</p>
                         <p class="flex items-center"><span class="text-brand-gold mr-3">📞</span> Plantão 24h: (31) 99895-5912</p>
                         <p class="flex items-center"><span class="text-brand-gold mr-3">✉️</span> <a href="mailto:bh@advogados.emp.br" class="hover:text-white transition-colors">bh@advogados.emp.br</a></p>
@@ -381,7 +381,7 @@ function getTemplate(title, type, description, breadcrumbs, customContent = null
 
                 <!-- Col 2 -->
                 <div>
-                    <h4 class="text-white font-black uppercase tracking-widest text-xs mb-8 border-b border-white/10 pb-4">Atuação</h4>
+                    <h3 class="text-white font-black uppercase tracking-widest text-xs mb-8 border-b border-white/10 pb-4">Atuação</h3>
                     <ul class="space-y-4 text-sm font-bold">
                         <li><a href="/prisao-bh/" class="hover:text-brand-gold transition-colors">Prisão e Urgência BH</a></li>
                         <li><a href="/inquerito-bh/" class="hover:text-brand-gold transition-colors">Inquérito e Investigação BH</a></li>
@@ -394,7 +394,7 @@ function getTemplate(title, type, description, breadcrumbs, customContent = null
 
                 <!-- Col 3: SEO Geo Links (Preview) -->
                 <div>
-                    <h4 class="text-white font-black uppercase tracking-widest text-xs mb-8 border-b border-white/10 pb-4">Plantão Local</h4>
+                    <h3 class="text-white font-black uppercase tracking-widest text-xs mb-8 border-b border-white/10 pb-4">Plantão Local</h3>
                     <ul class="space-y-4 text-sm font-bold">
                         <li><a href="/bairros/advogado-criminalista-savassi-bh" class="hover:text-white transition-colors">Savassi</a></li>
                         <li><a href="/bairros/advogado-criminalista-pampulha-bh" class="hover:text-white transition-colors">Pampulha</a></li>
@@ -607,7 +607,7 @@ function getBairroTemplate(bairro) {
     </header>
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-10 flex items-center space-x-2 font-bold">
+        <div class="text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-10 flex items-center space-x-2 font-bold">
             <a href="/" class="hover:text-brand-gold transition-colors">Home</a> 
             <span>/</span> 
             <a href="/bairros/" class="hover:text-brand-gold transition-colors font-bold">Bairros BH</a> 
@@ -695,8 +695,8 @@ function getBairroTemplate(bairro) {
 
             <!-- Interlinking Silo Base -->
             <div class="mt-20 pt-10 border-t border-white/5">
-                <h4 class="text-xs font-black text-white mb-8 uppercase tracking-[0.3em]">Estrutura de Defesa e Tese Relacionada</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-slate-500 font-bold uppercase tracking-widest">
+                <h4 class="text-xs font-black text-white mb-8 uppercase tracking-[0.3em]">Estrutura de Defesa e Tese Relacionada</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-slate-400 font-bold uppercase tracking-widest">
                     <div class="bg-black/20 p-6 rounded-2xl border border-white/5">
                         <strong class="block mb-4 text-brand-gold">Especialidades Vitais:</strong>
                         <ul class="space-y-3 list-none p-0">${pilarLinks}</ul>
@@ -771,7 +771,7 @@ const bairrosHtml = `<!DOCTYPE html>
         </div>
     </header>
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-10 font-bold"><a href="/" class="hover:text-brand-gold transition-colors">Home</a> <span class="mx-2">/</span> <span class="text-brand-gold font-black">Bairros Atendidos</span></div>
+        <div class="text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-10 font-bold"><a href="/" class="hover:text-brand-gold transition-colors">Home</a> <span class="mx-2">/</span> <span class="text-brand-gold font-black">Bairros Atendidos</span></div>
         <div class="glass-dark p-10 md:p-16 rounded-[40px] shadow-2xl border border-white/5 relative overflow-hidden mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">Atendimento Local Belo Horizonte</h1>
             <p class="text-slate-400 text-lg mb-12 max-w-3xl leading-relaxed">Localize nossa atuação rápida em sua região metropolitana. Cobrimos todos os 220 bairros com logística tática para delegacias e fóruns.</p>
