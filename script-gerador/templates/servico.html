@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ service.name }}{% endblock %}
+
+{% block content %}
+<article
+    class="glass-dark p-6 md:p-10 lg:p-14 rounded-[40px] shadow-2xl border border-white/5 relative overflow-hidden">
+    <!-- Generated detailed content goes here -->
+    <h1 class="text-3xl md:text-5xl font-black text-white mb-6">{{ service.name }} em BH</h1>
+    <div class="prose max-w-none text-slate-300 leading-relaxed text-lg mb-8">
+        {{ generated_content | safe }}
+    </div>
+
+    <!-- Call to action local -->
+    <div
+        class="mt-16 bg-gradient-to-br from-brand-gold/20 to-brand-dark rounded-[32px] p-10 text-center text-white relative">
+        <h3 class="text-2xl font-black mb-4">Problemas com {{ service.name }}?</h3>
+        <p class="mb-8">Consulte um advogado criminalista 24h especialista em BH.</p>
+        <a href="https://wa.me/5531998955912"
+            class="btn-gold-glow bg-brand-gold text-brand-dark font-black px-8 py-3 rounded-xl">FALAR COM ADVOGADO</a>
+    </div>
+</article>
+{% endblock %}

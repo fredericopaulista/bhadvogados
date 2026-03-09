@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Defesa Técnica 24h em BH{% endblock %}
+
+{% block content %}
+<article
+    class="glass-dark p-6 md:p-10 lg:p-14 rounded-[40px] shadow-2xl border border-white/5 relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-gold/10 blur-[100px] rounded-full"></div>
+
+    <div class="inline-flex items-center bg-red-500/10 border border-red-500/20 px-4 py-2 rounded-full mb-10">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse mr-2"></span>
+        <span class="text-red-400 text-xs font-black uppercase tracking-widest">Plantão Ativo 24h</span>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl font-black text-white mb-10 leading-tight tracking-tighter">{{ hero_title }}</h1>
+    <div class="h-1.5 w-24 bg-gradient-to-r from-brand-gold to-yellow-600 rounded-full mb-12"></div>
+
+    <div class="prose max-w-none text-gray-700 leading-relaxed text-lg mb-8">
+        <section class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8 tracking-tight">{{ section_1_title }}</h2>
+            <p class="text-slate-300 text-lg leading-relaxed mb-6 font-medium">{{ section_1_text }}</p>
+        </section>
+
+        <!-- Dynamic services list from python generator -->
+        <section class="mb-24">
+            <h2 class="text-4xl font-black text-white mb-12 text-center">Nossos Eixos de Atuação e Clusters de Defesa
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for folder in folders %}
+                <div class="glass-dark p-8 rounded-3xl shadow-2xl border border-white/5 relative overflow-hidden group">
+                    <h3
+                        class="text-2xl font-black text-white mb-6 flex items-center border-b border-white/10 pb-4 relative z-10">
+                        <span class="mr-3 text-brand-gold">{{ folder.icon }}</span> {{ folder.name }}
+                    </h3>
+                    <ul class="space-y-3 mb-8 relative z-10">
+                        {% for sub in folder.subservices %}
+                        <li><a href="/{{ folder.slug }}/{{ sub.slug }}.html"
+                                class="text-slate-400 text-sm hover:text-brand-gold transition-colors block font-medium">{{
+                                sub.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="mb-24 glass p-12 rounded-3xl relative overflow-hidden group">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 relative z-10">Atendimento em Belo Horizonte e
+                Região Metropolitana</h2>
+            <div class="flex flex-wrap gap-3 relative z-10">
+                {% for bairro in bairros %}
+                <a href="/bairros/advogado-criminalista-{{ bairro.slug }}-bh.html"
+                    class="bg-slate-900/50 backdrop-blur-sm px-5 py-2.5 border border-white/10 rounded-xl text-sm font-semibold text-slate-300 hover:bg-brand-gold hover:text-brand-dark transition-all">{{
+                    bairro.name }}</a>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</article>
+{% endblock %}

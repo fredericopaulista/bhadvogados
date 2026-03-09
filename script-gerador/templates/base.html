@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }} | Advogado Criminal BH{% endblock %}</title>
+
+    <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }} | Advogado Criminalista">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- Preconnect to Google Fonts domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Non-blocking Google Fonts -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Inlined CSS for critical rendering path optimization -->
+    {% if tailwind_css or style_css %}
+    <style>{{ tailwind_css|safe }} {{ style_css|safe }}</style>
+    {% endif %}
+
+    <!-- Schema Markup Completo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LegalService",
+          "name": "Defesa Técnica Especializada - Belo Horizonte",
+          "image": "https://bh.advogados.emp.br/assets/img/logo.jpg",
+          "@id": "https://bh.advogados.emp.br/#organization",
+          "url": "https://bh.advogados.emp.br/",
+          "telephone": "+5531998955912",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Afonso Pena",
+            "addressLocality": "Belo Horizonte",
+            "addressRegion": "MG",
+            "postalCode": "30130-000",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Attorney",
+          "name": "Advogado Criminalista Titular",
+          "url": "https://bh.advogados.emp.br/sobre"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-brand-darker text-slate-300 pt-20">
+
+    <header id="main-header" class="fixed top-0 w-full glass-dark text-white z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/"
+                        class="text-2xl md:text-3xl font-black tracking-tighter hover:scale-105 transition-transform duration-300">
+                        <span class="text-white">Criminalista</span><span class="text-brand-gold">BH</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="/#urgencia"
+                        class="hover:text-brand-gold transition-colors font-bold text-sm uppercase tracking-widest">Urgências
+                        24h</a>
+                    <a href="/sobre"
+                        class="hover:text-brand-gold transition-colors font-bold text-sm uppercase tracking-widest">Sobre</a>
+                    <a href="/bairros/"
+                        class="hover:text-brand-gold transition-colors font-bold text-sm uppercase tracking-widest">Bairros</a>
+                    <a href="/blog/"
+                        class="hover:text-brand-gold transition-colors font-bold text-sm uppercase tracking-widest">Blog</a>
+                </nav>
+
+                <!-- CTA Desk -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/5531998955912"
+                        class="btn-gold-glow bg-brand-gold text-brand-dark font-black px-7 py-3 rounded-xl transition-all shadow-xl flex items-center uppercase tracking-tighter text-sm">
+                        Urgência 24h
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-screen-2xl px-2 sm:px-4 mx-auto py-16">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Mega Footer Global -->
+    <footer class="bg-black pt-24 pb-12 text-slate-400 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">
+                <p>&copy; 2026 Flávia Cury - Advocacia Criminal. Todos os direitos protegidos.</p>
+                <div class="mt-8 md:mt-0 flex flex-wrap justify-center gap-6">
+                    <a href="/sobre/" class="hover:text-brand-gold transition-colors">A Advogada</a>
+                    <a href="/contato/" class="hover:text-brand-gold transition-colors">Contato</a>
+                    <a href="/privacidade/" class="hover:text-brand-gold transition-colors">Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inlined JS -->
+    {% if main_js %}
+    <script>{{ main_js|safe }}</script>
+    {% endif %}
+</body>
+
+</html>
